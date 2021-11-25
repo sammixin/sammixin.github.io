@@ -9,7 +9,7 @@
 
 [View full codebook here](https://colab.research.google.com/drive/1JuVrCFj5vFuQ9obNVlh9Yb17akc42E61?usp=sharing)
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/Project1.jpeg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
