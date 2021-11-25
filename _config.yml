@@ -1,9 +1,12 @@
 title: Xinyuan Hu/胡心缘 # your name (or website title) here
 logo: "/images/生活照_胡心缘.jpeg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Graduate Student in Social Policy + Data Analytics Program @ University of Pennsylvania/宾夕法尼亚大学社会政策与数据分析项目理学硕士
+  Graduate Student in Social Policy + Data Analytics Program 
+  @ University of Pennsylvania
   <br><br>
-  <a href="linkedin.com/in/xinyuan-hu-1a92171b8">View My LinkedIn Profile</a> 
+  宾夕法尼亚大学社会政策与数据分析项目理学硕士
+  <br><br>
+  <a href="http://www.linkedin.com/in/xinyuan-hu-1a92171b8">View My LinkedIn Profile</a> 
   
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
