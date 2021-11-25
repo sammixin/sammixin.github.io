@@ -5,6 +5,8 @@
 ### Python 
 
 [Project 1 Title](/sample_page)
+[View complete report here](https://drive.google.com/file/d/10XaaOJVE-_Pvsk2JyGxMozxADWfJ82N5/view?usp=sharing)
+[View full codebook here](https://colab.research.google.com/drive/1JuVrCFj5vFuQ9obNVlh9Yb17akc42E61?usp=sharing)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
