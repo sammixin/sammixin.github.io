@@ -41,7 +41,7 @@
 ### PPT
 
 #### Alibaba & Tecent ecosystem investment 
-[View complete report here](https://drive.google.com/file/d/1CejNUoduCt27VYteOrmwORtaGs7abGgh/view?usp=sharing)
+[View complete report here](https://github.com/sammixin/sammixin.github.io/blob/master/pdf/PPT_Xinyuan%20Hu.pdf)
 
 <img src="images/ppt.png?raw=true"/>
 
