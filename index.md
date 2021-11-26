@@ -22,11 +22,19 @@
 ### R
 
 #### Project : Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
-[View complete report here](https://drive.google.com/file/d/10XaaOJVE-_Pvsk2JyGxMozxADWfJ82N5/view?usp=sharing)
+[View complete report here]()
 
-[View full codebook here](https://yimingm.github.io/sample_page.html)
+[View full codebook here]()
 
 <img src="images/Project1.png?raw=true"/>
+
+---
+
+### Arcgis
+
+#### Projects :
+
+<img src="images/GIS.png?raw=true"/>
 
 ---
 
