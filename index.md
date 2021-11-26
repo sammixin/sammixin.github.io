@@ -14,6 +14,7 @@
 ---
 #### Project 2 : Extraction of attribute and visual features leading to viral TikTok videos 
 [View full codebook here](https://colab.research.google.com/drive/1YHJSX09HjTB3ub-9vK1B_H6jQTYpLzL1?usp=sharing)
+
 <img src="images/Project2.png?raw=true"/>
 
 ---
@@ -30,8 +31,12 @@
 
 ---
 
+### PPT
 
+#### Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
+[View complete report here](https://drive.google.com/file/d/1CejNUoduCt27VYteOrmwORtaGs7abGgh/view?usp=sharing)
 
+<img src="images/PPT.png?raw=true"/>
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
