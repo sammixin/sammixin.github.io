@@ -21,14 +21,13 @@
 
 ### R
 
-#### Project 1 : Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
+#### Project : Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
 [View complete report here](https://drive.google.com/file/d/10XaaOJVE-_Pvsk2JyGxMozxADWfJ82N5/view?usp=sharing)
 
 [View full codebook here](https://colab.research.google.com/drive/1JuVrCFj5vFuQ9obNVlh9Yb17akc42E61?usp=sharing)
 
 <img src="images/Project1.png?raw=true"/>
 
-[view full codes and deliverable here](/pdf/project.html)
 ---
 
 ### PPT
