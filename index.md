@@ -28,7 +28,7 @@
 
 <img src="images/Project1.png?raw=true"/>
 
-
+[view full codes and deliverable here](/pdf/project.html)
 ---
 
 ### PPT
