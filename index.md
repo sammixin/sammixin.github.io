@@ -32,10 +32,10 @@
 
 ### PPT
 
-#### Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
+#### Alibaba & Tecent ecosystem investment 
 [View complete report here](https://drive.google.com/file/d/1CejNUoduCt27VYteOrmwORtaGs7abGgh/view?usp=sharing)
 
-<img src="images/PPT.png?raw=true"/>
+<img src="images/ppt.png?raw=true"/>
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
