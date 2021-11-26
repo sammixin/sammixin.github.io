@@ -14,7 +14,7 @@
 ---
 #### Project 2 : Extraction of attribute and visual features leading to viral TikTok videos 
 [View full codebook here](https://colab.research.google.com/drive/1YHJSX09HjTB3ub-9vK1B_H6jQTYpLzL1?usp=sharing)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/Project2.png?raw=true"/>
 
 ---
 [Project 3 Title](http://example.com/)
