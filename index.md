@@ -17,18 +17,16 @@
 <img src="images/Project2.png?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
----
+### R
 
-### Category Name 2
+#### Project 1 : Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
+[View complete report here](https://drive.google.com/file/d/10XaaOJVE-_Pvsk2JyGxMozxADWfJ82N5/view?usp=sharing)
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+[View full codebook here](https://colab.research.google.com/drive/1JuVrCFj5vFuQ9obNVlh9Yb17akc42E61?usp=sharing)
+
+<img src="images/Project1.png?raw=true"/>
+
 
 ---
 
