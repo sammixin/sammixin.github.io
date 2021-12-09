@@ -49,7 +49,7 @@
 
 ### Webpage
 
-#### Digital Contact Tracing
+#### COVID-19 Digital Contact Tracing
 [View the webpage here](https://sammixin.wixsite.com/blog)
 
 <img src="images/webpage.png?raw=true"/>
