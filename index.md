@@ -21,12 +21,10 @@
 
 ### R
 
-#### Project : Retrospective analysis of the currency exchange rate fluctuations during the COVID-19 and a case study focus on the Chinese Yuan
+#### Project : Evaluation Study on WIC Program
 [View complete report here]()
 
 [View full codebook here]()
-
-<img src="images/Project1.png?raw=true"/>
 
 ---
 
