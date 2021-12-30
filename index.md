@@ -21,6 +21,8 @@
 #### Project 3 : Stroke Prediction 
 [View full codebook here](https://colab.research.google.com/drive/1zDGUliY_vuKWDiIQ2n5nSVRmNMPyh8bg?usp=sharing)
 
+<img src="images/Project3.png?raw=true"/>
+
 ---
 
 ### R
