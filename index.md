@@ -19,7 +19,7 @@
 
 ---
 #### Project 3 : Stroke Prediction 
-[View complete report here](https://sammixin.github.io/pdf/MSSP%20608%20project%20report.pdf)
+[View complete report here](https://sammixin.github.io/pdf/MSSP_608_project_report.pdf)
 
 [View full codebook here](https://colab.research.google.com/drive/1zDGUliY_vuKWDiIQ2n5nSVRmNMPyh8bg?usp=sharing)
 
