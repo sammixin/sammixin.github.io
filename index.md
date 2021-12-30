@@ -18,6 +18,10 @@
 <img src="images/Project2.png?raw=true"/>
 
 ---
+#### Project 3 : Stroke Prediction 
+[View full codebook here](https://colab.research.google.com/drive/1zDGUliY_vuKWDiIQ2n5nSVRmNMPyh8bg?usp=sharing)
+
+---
 
 ### R
 
