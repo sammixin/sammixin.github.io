@@ -27,15 +27,6 @@
 
 ---
 
-### R
-
-#### Project : Evaluation Study on WIC Program
-[View complete report here]()
-
-[View full codebook here]()
-
----
-
 ### Arcgis
 
 #### Projects :
