@@ -27,6 +27,18 @@
 
 ---
 
+### R
+
+#### Project : Evaluation study examining the effect of the WIC Program participation during pregnancy on the child mathematics achievement in 1997
+
+[View complete report here]()
+
+[View full codebook here]()
+
+<img src="images/Project3.png?raw=true"/>
+
+---
+
 ### Arcgis
 
 #### Projects :
