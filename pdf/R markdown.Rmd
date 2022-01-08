@@ -1,0 +1,177 @@
+---
+title: "Effect of the WIC Program participation during pregnancy on the child mathematics achievement in 1997"
+author: "Xinyuan Hu"
+date: "11/25/2020"
+output: html_document
+---
+
+```{r setup}
+knitr::opts_knit$set(root.dir = '/Users/huxinyuan/Downloads')
+```
+
+## Importing the dataset
+```{r}
+good<-read.csv("good.csv")
+good$Race<-ifelse(good$CHRACE==9,NA,ifelse(good$CHRACE==1,.5,ifelse(good$CHRACE==2,-.5,NA)))
+attach(good)
+good_sub<-data.frame(mathraw97,WICpreg,AGE97,faminc97,bthwht,HOME97,Race)
+```
+
+## Descriptive statistics
+```{r}
+summary(good_sub)
+nrow(good_sub)
+goodR <- na.omit(good_sub)
+nrow(goodR)
+library(psych)
+summary(goodR) 
+describe(goodR)
+detach(good)
+```
+
+## Correlation
+```{r}
+cor_goodR<-cor(goodR[,c( "mathraw97","AGE97","faminc97","bthwht","WICpreg","HOME97","Race")], use="complete.obs")
+show(cor_goodR)
+```
+
+## Normality
+```{r}
+par(mfrow=c(3,2))
+hist(goodR$faminc97,freq=FALSE)
+lines(density(goodR$faminc97))
+qqnorm(goodR$faminc97)
+qqline(goodR$faminc97,col="red")
+hist(goodR$AGE97, freq = FALSE)
+lines(density(goodR$AGE97))
+qqnorm(goodR$AGE97)
+qqline(goodR$AGE97,col="red")
+hist(goodR$HOME97, freq = FALSE)
+lines(density(goodR$HOME97))
+qqnorm(goodR$HOME97)
+qqline(goodR$HOME97,col="red")
+```
+
+## Linearity
+```{r}
+par(mfrow=c(1,1))
+good1 <-goodR[,c( "mathraw97","AGE97","faminc97","HOME97")]
+pairs(good1,panel=panel.smooth)
+```
+
+## Data transformation
+```{r}
+min(goodR$faminc97)
+goodR$logfaminc <- ifelse(goodR$faminc97 <= 1, 0,ifelse(goodR$faminc97 > 1, log(goodR$faminc97), NA))
+goodR$AGE97c <- goodR$AGE97 - mean(goodR$AGE97)
+goodR$AGE97c2 <- (goodR$AGE97c)^2
+lm1<-lm(mathraw97~AGE97c+AGE97c2+logfaminc+bthwht+WICpreg+Race+HOME97,data=goodR)
+summary(lm1)
+```
+
+## Homoscedasticity & # Normality of Residuals.
+```{r}
+plot(lm1)
+```
+
+## Outliers
+```{r}
+outliers<-goodR[,c("mathraw97","logfaminc","AGE97c","AGE97c2","bthwht","HOME97","WICpreg","Race")]
+outliers$cd <- cooks.distance(lm1)
+large_cd<-subset(outliers, cd > (4/1848))
+library(Hmisc)
+describe(large_cd$cd)
+hist(large_cd$cd)
+quantile(large_cd$cd, probs = seq(0, 1, 0.05))
+outliers2<-subset(outliers, cd < 0.009177413)
+lm2 <- lm(mathraw97 ~ WICpreg + AGE97c + AGE97c2 + logfaminc + bthwht + HOME97+Race, data = outliers2)
+summary(lm1)
+summary(lm2)
+```
+
+## Multicollinearity
+```{r}
+library(car)
+vif(lm2) 
+```
+
+## Centering variables
+```{r}
+good_final<-outliers2
+good_final$chome<-good_final$HOME97 - mean(good_final$HOME97)
+good_final$cinc <- good_final$logfaminc - mean(good_final$logfaminc)
+good_final$cincWIC <- good_final$cinc * good_final$WICpreg
+good_final$agecWIC <- good_final$AGE97c * good_final$WICpreg
+good_final$agec2WIC <- good_final$AGE97c2 * good_final$WICpreg
+good_final$raceWIC <- good_final$Race * good_final$WICpreg
+```
+
+## Main Effects Model
+```{r}
+lm3<-lm(mathraw97 ~ WICpreg + AGE97c + AGE97c2 + cinc + bthwht + chome+Race, data = good_final)
+summary(lm3)
+```
+
+## Interaction effect of wicpreg*logfaminc
+```{r}
+lm4<-lm(mathraw97 ~ WICpreg + AGE97c + AGE97c2 + cinc + bthwht + chome+Race+cincWIC, data = good_final)
+summary(lm4)
+```
+
+## Interaction effect of wicpreg*race
+```{r}
+lm5<-lm(mathraw97 ~ WICpreg + AGE97c + AGE97c2 + cinc + bthwht + chome+Race+raceWIC, data = good_final)
+summary(lm5)
+```
+
+## Interaction effect of wicpreg*age
+```{r}
+lm6<-lm(mathraw97 ~ WICpreg + AGE97c + AGE97c2 + cinc + bthwht + chome+Race+agecWIC+agec2WIC, data = good_final)
+summary(lm6)
+```
+
+## Plotting the interaction effects
+```{r}
+library(ggplot2)
+```
+
+## wicpreg*logfaminc
+```{r}
+goodplot4<-good_final[,c("mathraw97","WICpreg","cinc","cincWIC")]
+goodplot4$AGE97c <- 0
+goodplot4$AGE97c2 <- 0
+goodplot4$chome <- 0
+goodplot4$bthwht<- 0
+goodplot4$Race<- .5
+goodplot4$fit<-predict(lm4, goodplot4)
+goodplot4$WicR<-factor(goodplot4$WICpreg, levels=c(0,1), labels=c("Non-WIC","WIC"))
+ggplot(goodplot4, aes(x = cinc+mean(good_final$logfaminc), y= fit))+geom_smooth(method="loess", aes(colour= WicR), se=FALSE) +scale_color_manual(name="",values=c("#AEAAAA","#72BA9F")) +scale_x_continuous(limits=c(-4, 16), breaks=seq(-4, 16, by=2))+scale_y_continuous(limits=c(0,100), breaks=seq(0,100, by=10)) +labs(y="Child Mathematics Achievement Score", x="Log Family Income")+ ggtitle("Interaction between WICpreg and cinc") +theme(plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(), panel.grid.minor = element_blank(),panel.background = element_blank(),axis.ticks = element_blank(),axis.line.x=element_line(),axis.line.y=element_line(),legend.key=element_blank())
+```
+
+## wicpreg*race
+```{r}
+goodplot5<-good_final[,c("mathraw97","WICpreg","Race","raceWIC")]
+goodplot5$AGE97c <- 0
+goodplot5$AGE97c2 <- 0
+goodplot5$cinc <- 0
+goodplot5$chome <- 0
+goodplot5$bthwht<- 0
+goodplot5$fit<-predict(lm5, goodplot5)
+goodplot5$WicR<-factor(goodplot5$WICpreg, levels=c(0,1), labels=c("Non-WIC","WIC"))
+goodplot5$raceR<-factor(goodplot5$Race, levels=c(-.5,.5), labels=c("Black","White"))
+d <- aggregate(goodplot5$fit ~ goodplot5$raceR * goodplot5$WicR, FUN = mean)
+show(d)
+```
+
+## wicpreg*age
+```{r}
+goodplot6<-good_final[,c("mathraw97","WICpreg","AGE97c","AGE97c2","agecWIC","agec2WIC")]
+goodplot6$chome <- 0
+goodplot6$bthwht <- 0
+goodplot6$cinc <- 0
+goodplot6$Race <- .5
+goodplot6$fit<-predict(lm6, goodplot6)
+goodplot6$WicR<-factor(goodplot6$WICpreg, levels=c(0,1), labels=c("Non-WIC","WIC"))
+ggplot(goodplot6, aes(x = AGE97c+mean(goodR$AGE97), y= fit))+geom_smooth(method="loess", aes(colour= WicR), se=FALSE) +scale_color_manual(name="",values=c("#AEAAAA","#72BA9F")) +scale_x_continuous(limits=c(0, 15), breaks=seq(0, 15, by=3))+scale_y_continuous(limits=c(0,100), breaks=seq(0,100, by=10)) +labs(y="Child Mathematics Achievement Score", x="Age")+ ggtitle("Interaction between WICpreg and AGE97") +theme(plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(), panel.grid.minor = element_blank(),panel.background = element_blank(),axis.ticks = element_blank(),axis.line.x=element_line(),axis.line.y=element_line(),legend.key=element_blank()) 
+```
+
