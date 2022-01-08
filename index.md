@@ -31,11 +31,11 @@
 
 #### Project : Evaluation study examining the effect of the WIC Program participation during pregnancy on the child mathematics achievement in 1997
 
-[View complete report here]()
+[View complete report here](https://sammixin.github.io/pdf/R_project.pdf)
 
-[View full codebook here]()
+[View full codebook here](https://sammixin.github.io/pdf/R-markdown.html)
 
-<img src="images/Project3.png?raw=true"/>
+<img src="images/R_project.png?raw=true"/>
 
 ---
 
