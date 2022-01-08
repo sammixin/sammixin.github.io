@@ -29,7 +29,7 @@
 
 ### R
 
-#### Project : Evaluation study examining the effect of the WIC Program participation during pregnancy on the child mathematics achievement in 1997
+#### Project 1 : Evaluation study examining the effect of the WIC Program participation during pregnancy on the child mathematics achievement in 1997
 
 [View complete report here](https://sammixin.github.io/pdf/R%20Rroject.pdf)
 
@@ -37,6 +37,10 @@
 
 <img src="images/R%20project.png?raw=true"/>
 
+---
+#### Other Projects (logistic regression, cluster analysis, PCA analysis and random forest) :
+
+<img src="images/R%20projects.png?raw=true"/>
 ---
 
 ### Arcgis
