@@ -41,6 +41,7 @@
 #### Other Projects (logistic regression, cluster analysis, PCA analysis and random forest) :
 
 <img src="images/R%20projects.png?raw=true"/>
+
 ---
 
 ### Arcgis
@@ -57,6 +58,13 @@
 [View complete report here](https://sammixin.github.io/pdf/PPT_Xinyuan%20Hu.pdf)
 
 <img src="images/ppt.png?raw=true"/>
+
+---
+
+#### Media in-depth report 
+[View complete report here](https://sammixin.github.io/pdf/PPT_Xinyuan%20Hu.pdf)
+
+<img src="images/Media.png?raw=true"/>
 
 ---
 
