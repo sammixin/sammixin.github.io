@@ -62,7 +62,7 @@
 ---
 
 #### Media in-depth report 
-[View complete report here](https://sammixin.github.io/pdf/PPT_Xinyuan%20Hu.pdf)
+[View complete report here](https://sammixin.github.io/pdf/美的集团深度报告.pdf)
 
 <img src="images/Media.png?raw=true"/>
 
