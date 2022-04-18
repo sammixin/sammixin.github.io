@@ -61,7 +61,7 @@
 
 ---
 
-#### Media in-depth report 
+#### Midea in-depth report 
 [View complete report here](https://sammixin.github.io/pdf/美的集团深度报告.pdf)
 
 <img src="images/Media.png?raw=true"/>
